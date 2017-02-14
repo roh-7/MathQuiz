@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Math Quiz</string>
+    <string name="question_text"> 2 + 3 - 1 = 5</string>
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="correct_answer">Your Answer is Right</string>
+    <string name="wrong_answer">Your Answer is Wrong</string>
+    <string name="nextButton">Next</string>
+</resources>
