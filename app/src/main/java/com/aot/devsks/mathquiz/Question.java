@@ -1,19 +1,23 @@
 package com.aot.devsks.mathquiz;
 
+import java.util.Random;
+
 /**
  * Created by devsks on 09/08/2016 AD.
  */
 public class Question {
     private int number;
     private boolean answer;
-    private  int mod;
+    private int mod;
+    private Random generator;
+
     Question()
     {
         mod = 103;
-        number =  (12345*152+1) % mod;
-        answer = setAnswer();
-
+        generator = new Random();
+        getNextQuestion();
     }
+
     private boolean setAnswer()
     {
         int sq = (int)Math.sqrt(number);
@@ -23,15 +27,18 @@ public class Question {
         return  true;
 
     }
+
     public void getNextQuestion()
     {
-        this.number = ( this.number + 12345*152+1)%mod;
+        this.number = generator.nextInt(mod);
         this.answer = setAnswer();
     }
+
     public boolean getAnswer()
     {
         return answer;
     }
+
     public  int getNumber()
     {
         return number;
